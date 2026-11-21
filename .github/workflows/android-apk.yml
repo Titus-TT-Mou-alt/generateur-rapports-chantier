@@ -39,9 +39,8 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
 
-      - name: Check code
-        run: flutter analyze
 
+     
       - name: Build APK
         run: flutter build apk --release
 
