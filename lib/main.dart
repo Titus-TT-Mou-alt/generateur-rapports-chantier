@@ -268,9 +268,9 @@ Future<void> _makePdf(Map<String, Object?> v) async {
     header: (_) => pw.Container(
       padding: const pw.EdgeInsets.only(bottom: 8),
       decoration: const pw.BoxDecoration(
-        border: pw.Border(bottom: pw.BorderSide(color: PdfColor.fromInt(0xFF164B57)))),
+        border: pw.Border(bottom: pw.BorderSide(color: pw.PdfColor.fromInt(0xFF164B57)))),
       child: pw.Text('DÉPARTEMENT ÉLECTROMÉCANIQUE',
-        style: pw.TextStyle(color: PdfColor.fromInt(0xFF164B57),
+        style: pw.TextStyle(color: pw.PdfColor.fromInt(0xFF164B57),
           fontWeight: pw.FontWeight.bold))),
     build: (_) => [
       pw.SizedBox(height: 14),
@@ -283,19 +283,19 @@ Future<void> _makePdf(Map<String, Object?> v) async {
       pw.SizedBox(height: 12),
       pw.Text('PERSONNES PRÉSENTES SUR SITE',
         style: pw.TextStyle(fontWeight: pw.FontWeight.bold,
-          color: PdfColor.fromInt(0xFF164B57))),
+          color: pw.PdfColor.fromInt(0xFF164B57))),
       pw.Wrap(spacing: 18, runSpacing: 8, children: people.map((p) =>
         pw.Container(width: 230, child: pw.Text(
           '• ${p['name']} — ${p['role']}'))).toList()),
       pw.SizedBox(height: 14),
       pw.Text('CONSTATS PAR LIEU',
         style: pw.TextStyle(fontWeight: pw.FontWeight.bold,
-          color: PdfColor.fromInt(0xFF164B57))),
+          color: pw.PdfColor.fromInt(0xFF164B57))),
       ...zones.map((z) => pw.Container(
         margin: const pw.EdgeInsets.only(top: 8),
         padding: const pw.EdgeInsets.all(9),
         decoration: pw.BoxDecoration(
-          border: pw.Border.all(color: PdfColor.fromInt(0xFFD9EEF0))),
+          border: pw.Border.all(color: pw.PdfColor.fromInt(0xFFD9EEF0))),
         child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start,
           children: [
             pw.Text('${z['place']}',
