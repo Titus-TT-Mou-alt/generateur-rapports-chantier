@@ -2,7 +2,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:pdf/widgets.dart' as pw;
+import 'package:pdf/widgets.dart' as pw; 
+import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
 import 'data_store.dart';
 
